@@ -1,0 +1,59 @@
+.topbanner {
+  font-family: "Barlow", sans-serif;
+  width: 100%;
+  background-color: black;
+  font-weight: 400;
+  text-align: left;
+  text-transform: lowercase;
+  padding: 10px 0;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+}
+
+.content p {
+  padding-left: 5px;
+  color: #eb4c6b;
+}
+
+.branding {
+  display: flex;
+  margin-top: 36px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.icon {
+  padding-right: 100px;
+  flex-basis: 20%;
+}
+
+.logo {
+  flex-basis: 15%;
+}
+.logo p {
+  font-family: Inter;
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 43.57px;
+  letter-spacing: 1px;
+  text-align: left;
+}
+
+
+.iconsContainer {
+  display: flex;
+  align-items: center;
+}
+
+.iconsContainer img {
+  margin: 0px 9px;
+}

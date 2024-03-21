@@ -1,0 +1,18 @@
+.link {
+  font-family: Simplon Norm;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 1px;
+  text-align: left;
+  color: black;
+  text-decoration: none;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%;
+  margin: 10px auto;
+  margin-top: 68px;
+}
