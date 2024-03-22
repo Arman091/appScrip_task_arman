@@ -12,6 +12,17 @@
   height: 100vh;
 }
 
+.priceshow {
+  display: block;
+  width: 300px;
+  position: absolute;
+  /* left: 140px; */
+  top: 542px;
+  right: 140px;
+  /* bottom: -1px; */
+  background-color: white;
+  height: 40vh;
+}
 .custom label {
   display: flex;
   align-items: center;
@@ -19,16 +30,16 @@
 }
 
 .custom label input[type="checkbox"] {
-    width: 22px;
-    height: 22px;
-  }
-  
-  .custom label .custom_title {
-   margin-left: 13px;
- }
+  width: 22px;
+  height: 22px;
+}
 
- .dropdowns{
-    display: flex;
-    flex-direction: column;
-    margin-top: 15px;
- }
+.custom label .custom_title {
+  margin-left: 13px;
+}
+
+.dropdowns {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+}

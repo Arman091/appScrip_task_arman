@@ -1,33 +1,30 @@
-"use client";
 import React, { useState } from "react";
 import Image from "next/image";
 import "./dropdown.css";
-const DropdownMenu = ({ title }) => {
+
+const DropdownMenu = ({ title, onCategorySelect }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [selectAll, setSelectAll] = useState(false);
   const [selectedOptions, setSelectedOptions] = useState([]);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const handleOptionChange = (event) => {
+  const handleOptionChange = async(event) => {
     const value = event.target.value;
-    if (value === "all") {
-      setSelectAll(!selectAll);
-      setSelectedOptions(selectAll ? [] : ["men", "women", "baby"]);
-    } else if (value === "unselectAll") {
-      setSelectAll(false);
-      setSelectedOptions([]);
+    let updatedOptions = [...selectedOptions];
+  
+    // Toggle the selected option
+    if (updatedOptions.includes(value)) {
+      updatedOptions = updatedOptions.filter((option) => option !== value);
     } else {
-      if (selectedOptions.includes(value)) {
-        setSelectedOptions(
-          selectedOptions.filter((option) => option !== value)
-        );
-      } else {
-        setSelectedOptions([...selectedOptions, value]);
-      }
+      updatedOptions.push(value);
     }
+  
+    await setSelectedOptions(updatedOptions);
+  
+    // Pass back selected categories to parent component
+    onCategorySelect(value);
   };
 
   return (

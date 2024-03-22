@@ -1,6 +1,6 @@
 import styles from "./filter.module.css";
 import DropdownMenu from "./Dropdown";
-const Filter = ({ isOpen }) => {
+const Filter = ({ isOpen, onCategorySelect }) => {
   const titles = [
     "IDEAL FOR",
     "OCCASION",
@@ -21,7 +21,11 @@ const Filter = ({ isOpen }) => {
       </div>
       <div className={styles.dropdowns}>
         {titles.map((title, index) => (
-          <DropdownMenu key={index} title={title} />
+          <DropdownMenu
+            key={index}
+            title={title}
+            onCategorySelect={onCategorySelect}
+          />
         ))}
       </div>
     </div>

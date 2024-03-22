@@ -23,6 +23,7 @@
   font-size: 18px;
   font-weight: 700;
   line-height: 40px;
+  cursor: pointer;
   display: flex;
   align-items: center;
 }
@@ -61,6 +62,7 @@
 .container {
   width: 80%;
   margin: 1px auto;
+  min-height: 100vh;
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 columns with equal width */
   grid-template-rows: repeat(5, auto); /* 5 rows with automatic height */
