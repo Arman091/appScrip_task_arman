@@ -6,16 +6,16 @@ const Navbar = () => {
       <Link href="/" className={`${styles.link}`}>
         SHOP
       </Link>
-      <Link href="/" className={`${styles.link}`}>
+      <Link href="#" className={`${styles.link}`}>
         SKILLS
       </Link>
-      <Link href="/" className={`${styles.link}`}>
+      <Link href="#" className={`${styles.link}`}>
         STORES
       </Link>
-      <Link href="/" className={`${styles.link}`}>
+      <Link href="#" className={`${styles.link}`}>
         ABOUT
       </Link>
-      <Link href="/" className={`${styles.link}`}>
+      <Link href="#" className={`${styles.link}`}>
         CONTACTS
       </Link>
     </div>

@@ -43,19 +43,21 @@
 
 .subscriber {
   padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
+  background-color: #747b83;
+  color: #ffffff;
   border: none;
   border-radius: 5px;
+  margin-left: 6px;
   cursor: pointer;
-}
-
-.contact_details {
-  /* display: flex; */
+  font-family: Simplon Norm;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21.6px;
+  text-align: left;
 }
 
 .trans_details {
-  font-size: 11px;
+  font-size: 15px;
 }
 .contact_us {
   flex: 1;
@@ -64,7 +66,10 @@
 
 .usd {
   display: flex;
-  margin-top: 11px;
+  margin-top: 8px;
+}
+.usd span {
+  margin-left: 10px;
 }
 .contact_us h3 {
   font-size: 20px;
@@ -86,11 +91,6 @@
   margin-bottom: 10px;
 }
 
-.currency .smallText {
-  font-size: 14px;
-  margin-bottom: 20px;
-}
-
 .action_links {
   display: flex;
   justify-content: space-between;
@@ -104,9 +104,29 @@
   max-width: 300px;
 }
 
+.quickLinks ul {
+  list-style: none;
+  padding-top: 10px;
+}
+
+.quickLinks ul li {
+  margin: 9px 1px;
+}
 .links {
   list-style: none;
   padding: 0;
+  padding-top: 30px;
+}
+.link {
+  font-family: Simplon Norm;
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 2px;
+  letter-spacing: 1px;
+  text-align: left;
+  color: black;
+  text-decoration: none;
+  color: white;
 }
 
 .links li {
@@ -132,4 +152,12 @@
 .paymentMethodsContainer h3 {
   font-size: 20px;
   margin-bottom: 10px;
+}
+
+.payments{
+  display: flex;
+  justify-content: space-between;
+}
+.copyright {
+  text-align: center;
 }

@@ -3,11 +3,8 @@
 import { useState } from "react";
 import Image from "next/image";
 import styles from "./footer.module.css";
-
+import Link from "next/link";
 const Footer = () => {
-  const [isMettaMuse, setIsMettaMuse] = useState(false);
-  const [isQuickLinks, setIsQuickLinks] = useState(false);
-  const [isFollowUs, setIsFollowUs] = useState(false);
   return (
     <footer className={styles.main}>
       <div className={styles.wrapper}>
@@ -35,7 +32,7 @@ const Footer = () => {
               <h3>Currency</h3>
               <div className={styles.usd}>
                 <Image
-                  src="/amex.svg"
+                  src="/us.svg"
                   alt="televisionsvg"
                   style={{ marginBottom: "20px" }}
                   width={24}
@@ -56,27 +53,80 @@ const Footer = () => {
         {/* bottom footer */}
         <div className={styles.action_links}>
           <div className={styles.metta_muse}>
-            <h3>metta muse</h3>
+            <h3>Metta muse</h3>
             <ul className={styles.links}>
-              <li>About Us</li>
-              <li>Stories</li>
-              <li>Artisans</li>
-              <li>Boutiques</li>
-              <li>Contact Us</li>
-              <li>EU Compliances Docs</li>
+              <li>
+                <Link href="#" className={styles.link}>
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className={styles.link}>
+                  Stories
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className={styles.link}>
+                  Artisans
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className={styles.link}>
+                  Boutiques
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className={styles.link}>
+                  Contact Us
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className={styles.link}>
+                  EU Compliances Docs
+                </Link>
+              </li>
             </ul>
           </div>
           {/* second div */}
+
           <div className={styles.quickLinks}>
             <h3>QUICK LINKS</h3>
-            <ul className={`${isQuickLinks ? "mt20" : ""}`}>
-              <li>Orders & Shipping</li>
-              <li>Join/Login as a Seller</li>
-              <li>Payment & Pricing</li>
-              <li>Return & Refunds</li>
-              <li>FAQs</li>
-              <li>Privacy Policy</li>
-              <li>Terms & Conditions</li>
+            <ul>
+              <li>
+                <Link href="#" className={`${styles.link}`}>
+                  Orders & Shipping
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className={`${styles.link}`}>
+                  Join/Login as a Seller
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className={`${styles.link}`}>
+                  Payment & Pricing
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className={`${styles.link}`}>
+                  Return & Refunds
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className={`${styles.link}`}>
+                  FAQs
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className={`${styles.link}`}>
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className={`${styles.link}`}>
+                  Terms & Conditions
+                </Link>
+              </li>
             </ul>
           </div>
           {/* third container */}
@@ -84,9 +134,9 @@ const Footer = () => {
             <div className={styles.social_links_container}>
               <h3>follow Us</h3>
               <div className="social_links">
-                <Image src="/amex.svg" alt="infosvg" width={24} height={24} />
+                <Image src="/insta.svg" alt="infosvg" width={24} height={24} />
                 <Image
-                  src="/amex.svg"
+                  src="/a.svg"
                   alt="linkedinsvg"
                   width={24}
                   height={24}
@@ -96,11 +146,42 @@ const Footer = () => {
             {/* payment container */}
             <div className="paymentMethodsContainer">
               <h3>mettā muse Accepts</h3>
-              <div className="payments"></div>
+              <div className={styles.payments}>
+              <Image
+                  src="/apple-pay.svg"
+                  alt="linkedinsvg"
+                  width={34}
+                  height={34}
+                />
+                <Image
+                  src="/g-pay.svg"
+                  alt="linkedinsvg"
+                  width={34}
+                  height={34}
+                />
+                <Image
+                  src="/mastercard.svg"
+                  alt="linkedinsvg"
+                  width={34}
+                  height={34}
+                />
+                <Image
+                  src="/Opay.svg"
+                  alt="linkedinsvg"
+                  width={34}
+                  height={34}
+                />
+                <Image
+                  src="/paypal.svg"
+                  alt="linkedinsvg"
+                  width={34}
+                  height={34}
+                />
+              </div>
             </div>
           </div>
         </div>
-        <div className="copyright">
+        <div className={styles.copyright}>
           <p>Copyright © 2023 mettamuse. All rights reserved.</p>
         </div>
       </div>
