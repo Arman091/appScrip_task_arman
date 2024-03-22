@@ -1,0 +1,72 @@
+.products_nav {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0px auto;
+  align-items: center;
+  padding: 10px;
+  color: black;
+}
+
+.items {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  justify-content: space-evenly;
+}
+
+.number_item {
+  font-weight: bold;
+}
+.recom {
+  font-family: Simplon Norm;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 40px;
+  display: flex;
+  align-items: center;
+}
+.show_filter {
+  text-decoration: underline;
+  font-family: Simplon Norm;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 40px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  width: 31%;
+  justify-content: space-between;
+}
+
+.filter {
+  flex: 1;
+  padding: 10px;
+  background-color: #e0e0e0;
+}
+
+.products {
+  flex: 3;
+  padding: 10px;
+  background-color: #ffffff;
+}
+
+.products {
+  padding: 10px;
+  background-color: #ffffff;
+}
+
+/* =======styles for filter section and products section */
+
+.container {
+  width: 80%;
+  margin: 1px auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns with equal width */
+  grid-template-rows: repeat(5, auto); /* 5 rows with automatic height */
+  gap: 20px; /* spacing between grid items */
+}
+
+.section{
+    margin-top: 22px;
+}

@@ -1,0 +1,41 @@
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+  font-family: Simplon Norm;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  line-height: 21.6px;
+  text-align: left;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.dropdown-menu {
+  
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  z-index: 1;
+}
+
+.dropdown-menu span{
+    margin-left: 10px;
+}
+.dropdown-menu label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.all_text {
+  font-family: Simplon Norm;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.6px;
+  text-align: left;
+}
