@@ -7,6 +7,10 @@
   text-transform: lowercase;
   padding: 10px 0;
 }
+.header {
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e5e5e5;
+}
 
 .wrapper {
   display: flex;
@@ -39,7 +43,7 @@
 .logo {
   flex-basis: 15%;
 }
-.logo p {
+.logo h2 {
   font-family: Inter;
   font-size: 36px;
   font-weight: 800;
@@ -48,7 +52,6 @@
   text-align: left;
 }
 
-
 .iconsContainer {
   display: flex;
   align-items: center;
@@ -56,4 +59,21 @@
 
 .iconsContainer img {
   margin: 0px 9px;
+}
+
+.bannerTitle {
+  width: 721px;
+  height: 155px;
+  margin: 10px auto;
+  margin-top: 80px;
+  text-align: center;
+}
+
+.bannerTitle h1 {
+  padding-bottom: 11px;
+  
+}
+
+.bannerTitle p {
+  line-height: 24px;
 }

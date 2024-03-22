@@ -3,7 +3,7 @@ import Image from "next/image";
 import Navbar from "../navbar/Navbar";
 const Header = () => {
   return (
-    <>
+    <div className={classes.header}>
       <div className={classes.topbanner}>
         <div className={classes.wrapper}>
           <div className={classes.content}>
@@ -26,10 +26,15 @@ const Header = () => {
             <Image src="/logo.svg" alt="error" width={36} height={40} />
           </div>
           <div className={classes.logo}>
-            <p>LOGO</p>
+            <h2>LOGO</h2>
           </div>
           <div className={classes.iconsContainer}>
-            <Image src="/search-normal.png" alt="error" width={24} height={24} />
+            <Image
+              src="/search-normal.png"
+              alt="error"
+              width={24}
+              height={24}
+            />
             <Image src="/heart.svg" alt="error" width={24} height={24} />
             <Image src="/shopping-bag.svg" alt="error" width={24} height={24} />
             <Image src="/profile.svg" alt="error" width={24} height={24} />
@@ -37,9 +42,17 @@ const Header = () => {
             <Image src="/arrow-down.svg" alt="error" width={24} height={24} />
           </div>
         </div>
-       <Navbar/>
+        <Navbar />
+        <div className={classes.bannerTitle}>
+          <h1>DISCOVER OUR PRODUCTS</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur. Amet est posuere rhoncus
+            scelerisque. Dolor integer scelerisque nibh amet mi ut elementum
+            dolor.
+          </p>
+        </div>
       </div>
-    </>
+    </div>
   );
 };
 
