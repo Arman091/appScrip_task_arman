@@ -26,7 +26,7 @@ const Products = ({products}) => {
       : products;
 
   return (
-    <div>
+    <>
       <div className={styles.products_nav}>
         <div className={styles.items}>
           <div className={styles.number_item}>{filteredProducts.length} Items</div>
@@ -56,7 +56,7 @@ const Products = ({products}) => {
           ))}
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

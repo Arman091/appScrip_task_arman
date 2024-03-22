@@ -7,6 +7,10 @@
   text-transform: lowercase;
   padding: 10px 0;
 }
+
+.hamburger {
+  display: none;
+}
 .header {
   padding-bottom: 10px;
   border-bottom: 2px solid #e5e5e5;
@@ -43,6 +47,7 @@
 .logo {
   flex-basis: 15%;
 }
+
 .logo h2 {
   font-family: Inter;
   font-size: 36px;
@@ -71,9 +76,52 @@
 
 .bannerTitle h1 {
   padding-bottom: 11px;
-  
 }
 
 .bannerTitle p {
   line-height: 24px;
+}
+
+/* Media query for screens up to 768px (tablets) */
+@media (max-width: 768px) {
+  .bannerTitle {
+    width: auto;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .bannerTitle h1 {
+    font-size: 28px;
+  }
+
+  .bannerTitle p {
+    line-height: 20px;
+  }
+}
+
+/* Media query for screens up to 480px (mobile phones) */
+@media (max-width: 480px) {
+  .topbanner {
+    padding: 5px 0;
+    max-width: none;
+    width: 100%;
+  }
+
+  .hamburger {
+    display: block;
+  }
+  .header {
+    width: 150%;
+  }
+  .wrapper .content:nth-child(1),
+  .wrapper .content:nth-child(3) {
+    display: none;
+  }
+  .logo h2 {
+    font-size: 24px;
+  }
+
+  .icon {
+    padding-right: 50px;
+  }
 }

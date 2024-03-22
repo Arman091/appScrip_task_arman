@@ -22,6 +22,9 @@ const Header = () => {
       </div>
       <div className={classes.header_container}>
         <div className={classes.branding}>
+          <div className={classes.hamburger}>
+            <Image src="/hamlinear.png" alt="error" width={36} height={40}/>
+          </div>
           <div className={classes.icon}>
             <Image src="/logo.svg" alt="error" width={36} height={40} />
           </div>

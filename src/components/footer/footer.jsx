@@ -25,8 +25,11 @@ const Footer = () => {
           <div className={styles.contact_details}>
             <div className={styles.contact_us}>
               <h3>contact us</h3>
+              <div className={styles.media_contact}>
               <p style={{ marginBottom: "20px" }}>+44 221 133 5360</p>
               <p className={styles.trans_details}>customercare@mettamuse.com</p>
+              </div>
+             
             </div>
             <div className={styles.currency}>
               <h3>Currency</h3>
