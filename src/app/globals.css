@@ -1,21 +1,27 @@
+:root {
+  --bg: white;
+  --textColor: black;
+  --softBg: #f0f0f0;
+  --softTextColor: #626262;
+}
 
-  :root {
-    --bg: white;
-    --textColor: black;
-    --softBg: #f0f0f0;
-    --softTextColor: #626262;
-  }
-  
-  * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  
-  
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
-  @media screen and (max-width: 1536px) {
-    .wrapper {
-      max-width: 1366px;
-    }
+
+@media screen and (max-width: 1536px) {
+  .wrapper {
+    max-width: 1366px;
   }
+}
+@media screen and (max-width: 480px) {
+  body {
+    width: fit-content;
+    padding: 4px;
+    margin: 2px auto;
+    margin-left: 35px;
+  }
+}
