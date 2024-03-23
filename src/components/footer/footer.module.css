@@ -154,10 +154,10 @@
   margin-bottom: 10px;
 }
 
-.media_contact{
+.media_contact {
   display: block;
 }
-.payments{
+.payments {
   display: flex;
   justify-content: space-between;
 }
@@ -167,33 +167,33 @@
 @media (max-width: 480px) {
   .wrapper {
     max-width: 1200px;
-    width: 130%;
+
     margin: 0 auto;
     padding: 10px;
   }
-  
+
   .main {
     background-color: black;
     color: white;
     position: relative;
     top: 5em;
-    width: 150%;
+  
   }
   .upper_footer {
     display: flex;
     flex-direction: column;
   }
 
-  .media_contact{
+  .media_contact {
     display: flex;
     justify-content: space-between;
   }
 
-  .currency p{
+  .currency p {
     display: none;
   }
 
-  .action_links{
+  .action_links {
     display: flex;
     flex-direction: column;
   }

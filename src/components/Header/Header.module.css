@@ -42,6 +42,7 @@
 .icon {
   padding-right: 100px;
   flex-basis: 20%;
+ 
 }
 
 .logo {
@@ -88,7 +89,16 @@
     width: auto;
     height: auto;
     margin-top: 20px;
+    width: 721px;
   }
+  
+.branding {
+  display: flex;
+  margin-top: 36px;
+  align-items: center;
+  justify-content: space-between;
+}
+
 
   .bannerTitle h1 {
     font-size: 28px;
@@ -107,12 +117,28 @@
     width: 100%;
   }
 
-  .hamburger {
+  .hamburger{
     display: block;
   }
-  .header {
-    width: 150%;
+  .hamburger img {
+    display: block;
+    width: 19px;
+    height: 19px;
   }
+  .iconsContainer {
+    width: 135px;
+    overflow-x: hidden;
+  }
+  .bannerTitle {
+    width: auto;
+    height: auto;
+    margin-top: 20px;
+    width: 343px;
+  }
+  .branding{
+    margin-top: 0px;
+  }
+
   .wrapper .content:nth-child(1),
   .wrapper .content:nth-child(3) {
     display: none;
@@ -121,7 +147,12 @@
     font-size: 24px;
   }
 
-  .icon {
-    padding-right: 50px;
+  .icon{
+    padding-right: 0px;
+  }
+  .icon img {
+    padding-right: 0px;
+    width: 19px;
+    height: 19px;
   }
 }
