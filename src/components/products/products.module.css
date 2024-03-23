@@ -36,7 +36,7 @@
   text-align: left;
   display: flex;
   align-items: center;
-  width: 31%;
+ 
   justify-content: space-between;
 }
 
@@ -96,7 +96,6 @@
   .show_filter {
     text-decoration: underline;
     font-family: Simplon Norm;
-
     width: 70%;
     justify-content: space-between;
   }
