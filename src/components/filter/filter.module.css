@@ -9,7 +9,7 @@
   position: absolute;
   left: 140px;
   background-color: white;
-  height: 100vh;
+  height: 125vh;
 }
 
 .priceshow {
@@ -50,9 +50,20 @@
     display: block;
     width: 300px;
     position: absolute;
-    left: 140px;
+    left: 20px;
     background-color: white;
-    height: 100vh;
+    height: 111vh;
   }
 
+  .priceshow {
+    display: block;
+    width: 300px;
+    position: absolute;
+    /* left: 140px; */
+    top: 450px;
+    right: 8px;
+    /* bottom: -1px; */
+    background-color: white;
+    height: 40vh;
+  }
 }

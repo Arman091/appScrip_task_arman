@@ -107,6 +107,11 @@
 .quickLinks ul {
   list-style: none;
   padding-top: 10px;
+  list-style: none;
+  /* padding-top: 10px; */
+  margin: 0px;
+  margin-block-start: 0px;
+  padding-inline: 0px;
 }
 
 .quickLinks ul li {
@@ -115,7 +120,7 @@
 .links {
   list-style: none;
   padding: 0;
-  padding-top: 30px;
+  
 }
 .link {
   font-family: Simplon Norm;
@@ -196,5 +201,10 @@
   .action_links {
     display: flex;
     flex-direction: column;
+  }
+
+  .quickLinks h3{
+    margin-bottom: 0px;
+    
   }
 }

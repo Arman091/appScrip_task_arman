@@ -17,7 +17,7 @@
   margin-top: 68px;
 }
 
-.navbarham{
+.navbarham {
   display: none;
 }
 
@@ -33,15 +33,13 @@
   .navbarham {
     display: block;
     justify-content: space-evenly;
-    width: 30%;
-    margin-top: 68px;
+    width: 50%;
+
     display: flex;
     /* margin: 10px auto; */
-    margin-left: 30px;
-    margin-top: 30px;
     font-family: Simplon Norm;
     font-size: 12px;
-    font-weight: 100;
+
     line-height: 14.4px;
     text-align: left;
   }
