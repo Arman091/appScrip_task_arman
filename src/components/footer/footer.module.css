@@ -118,7 +118,7 @@
 
 .quickLinks ul {
   list-style: none;
-  padding-top: 10px;
+  padding-top: 0px;
   list-style: none;
   /* padding-top: 10px; */
   margin: 0px;
@@ -227,8 +227,16 @@
   .media_contact {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
+  
+  
+  .media_contact p {
+    /* Your styles here */
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
   .currency p {
     display: none;
   }
@@ -240,7 +248,7 @@
   }
 
   .quickLinks h3 {
-    margin-bottom: 0px;
+    margin-bottom: 9px;
   }
 
   /* styles for metta muse dropdown */

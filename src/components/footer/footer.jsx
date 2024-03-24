@@ -8,6 +8,15 @@ const Footer = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isquicklinkOpen, setquickLinkopen] = useState(false);
   const [isfollowOpen, setfollowOpen] = useState(false);
+  const quickLinks = [
+    { text: "Orders & Shipping", url: "#" },
+    { text: "Join/Login as a Seller", url: "#" },
+    { text: "Payment & Pricing", url: "#" },
+    { text: "Return & Refunds", url: "#" },
+    { text: "FAQs", url: "#" },
+    { text: "Privacy Policy", url: "#" },
+    { text: "Terms & Conditions", url: "#" },
+  ];
   const toggleQuicklinks = () => {
     setquickLinkopen(!isquicklinkOpen);
   };
@@ -39,8 +48,8 @@ const Footer = () => {
             <div className={styles.contact_us}>
               <h3>contact us</h3>
               <div className={styles.media_contact}>
-                <p style={{ marginBottom: "20px" }}>+44 221 133 5360</p>
-                <p className={styles.trans_details}>
+                <p>+44 221 133 5360</p>
+                <p >
                   customercare@mettamuse.com
                 </p>
               </div>
@@ -108,80 +117,24 @@ const Footer = () => {
             </div>
 
             <ul className={styles.links}>
-              <li>
-                <Link href="#" className={`${styles.link}`}>
-                  Orders & Shipping
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className={`${styles.link}`}>
-                  Join/Login as a Seller
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className={`${styles.link}`}>
-                  Payment & Pricing
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className={`${styles.link}`}>
-                  Return & Refunds
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className={`${styles.link}`}>
-                  FAQs
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className={`${styles.link}`}>
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className={`${styles.link}`}>
-                  Terms & Conditions
-                </Link>
-              </li>
+              {quickLinks.map((link, index) => (
+                <li key={index}>
+                  <Link href={link.url} className={styles.link}>
+                    {link.text}
+                  </Link>
+                </li>
+              ))}
             </ul>
 
             {isquicklinkOpen ? (
               <ul className={styles.toggleMenu}>
-                <li>
-                  <Link href="#" className={`${styles.link}`}>
-                    Orders & Shipping
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className={`${styles.link}`}>
-                    Join/Login as a Seller
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className={`${styles.link}`}>
-                    Payment & Pricing
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className={`${styles.link}`}>
-                    Return & Refunds
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className={`${styles.link}`}>
-                    FAQs
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className={`${styles.link}`}>
-                    Privacy Policy
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className={`${styles.link}`}>
-                    Terms & Conditions
-                  </Link>
-                </li>
+                {quickLinks.map((link, index) => (
+                  <li key={index}>
+                    <Link href={link.url} className={styles.link}>
+                      {link.text}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             ) : (
               ""
@@ -209,15 +162,24 @@ const Footer = () => {
                   height={24}
                 />
               </div>
-              {isfollowOpen?<div className={styles.toggleMenu}>
-                <Image src="/insta.svg" alt="infosvg" width={24} height={24} />
-                <Image
-                  src="/linkedin.svg"
-                  alt="linkedinsvg"
-                  width={24}
-                  height={24}
-                />
-              </div>:""}
+              {isfollowOpen ? (
+                <div className={styles.toggleMenu}>
+                  <Image
+                    src="/insta.svg"
+                    alt="infosvg"
+                    width={24}
+                    height={24}
+                  />
+                  <Image
+                    src="/linkedin.svg"
+                    alt="linkedinsvg"
+                    width={24}
+                    height={24}
+                  />
+                </div>
+              ) : (
+                ""
+              )}
             </div>
             {/* payment container */}
             <div className={styles.paymentMethodsContainer}>
