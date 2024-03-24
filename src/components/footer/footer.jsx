@@ -1,10 +1,15 @@
 "use client";
-
 import { useState } from "react";
 import Image from "next/image";
 import styles from "./footer.module.css";
 import Link from "next/link";
+import FooterDropdown from "./FooterDropdown";
 const Footer = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
   return (
     <footer className={styles.main}>
       <div className={styles.wrapper}>
@@ -26,10 +31,11 @@ const Footer = () => {
             <div className={styles.contact_us}>
               <h3>contact us</h3>
               <div className={styles.media_contact}>
-              <p style={{ marginBottom: "20px" }}>+44 221 133 5360</p>
-              <p className={styles.trans_details}>customercare@mettamuse.com</p>
+                <p style={{ marginBottom: "20px" }}>+44 221 133 5360</p>
+                <p className={styles.trans_details}>
+                  customercare@mettamuse.com
+                </p>
               </div>
-             
             </div>
             <div className={styles.currency}>
               <h3>Currency</h3>
@@ -41,7 +47,7 @@ const Footer = () => {
                   width={24}
                   height={24}
                 />
-                <span> +USD</span>
+                <span>+USD</span>
               </div>
 
               <p className={styles.trans_details}>
@@ -56,39 +62,28 @@ const Footer = () => {
         {/* bottom footer */}
         <div className={styles.action_links}>
           <div className={styles.metta_muse}>
-            <h3>Metta muse</h3>
+            <div className={styles.metta_arrow_down} onClick={toggleMenu}>
+              <h3>Metta muse</h3>
+              <Image
+                src="/arrow-down.svg"
+                alt="error"
+                width={34}
+                height={34}
+                className={styles.arrow_down}
+              />
+            </div>
+            {/* for large screens */}
             <ul className={styles.links}>
-              <li>
-                <Link href="#" className={styles.link}>
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className={styles.link}>
-                  Stories
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className={styles.link}>
-                  Artisans
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className={styles.link}>
-                  Boutiques
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className={styles.link}>
-                  Contact Us
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className={styles.link}>
-                  EU Compliances Docs
-                </Link>
-              </li>
+              <FooterDropdown />
             </ul>
+            {/* for smaller screens */}
+            {isMenuOpen ? (
+              <ul className={styles.toggleMenu}>
+                <FooterDropdown />
+              </ul>
+            ) : (
+              ""
+            )}
           </div>
           {/* second div */}
 
@@ -138,19 +133,14 @@ const Footer = () => {
               <h3>follow Us</h3>
               <div className="social_links">
                 <Image src="/insta.svg" alt="infosvg" width={24} height={24} />
-                <Image
-                  src="/a.svg"
-                  alt="linkedinsvg"
-                  width={24}
-                  height={24}
-                />
+                <Image src="/a.svg" alt="linkedinsvg" width={24} height={24} />
               </div>
             </div>
             {/* payment container */}
             <div className="paymentMethodsContainer">
               <h3>mettā muse Accepts</h3>
               <div className={styles.payments}>
-              <Image
+                <Image
                   src="/apple-pay.svg"
                   alt="linkedinsvg"
                   width={34}

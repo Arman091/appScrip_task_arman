@@ -10,7 +10,7 @@ const DropdownMenu = ({ title, onCategorySelect }) => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const handleOptionChange = async(event) => {
+  const handleOptionChange = (event) => {
     const value = event.target.value;
     let updatedOptions = [...selectedOptions];
   
@@ -21,7 +21,7 @@ const DropdownMenu = ({ title, onCategorySelect }) => {
       updatedOptions.push(value);
     }
   
-    await setSelectedOptions(updatedOptions);
+    setSelectedOptions(updatedOptions);
   
     // Pass back selected categories to parent component
     onCategorySelect(value);

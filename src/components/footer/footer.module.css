@@ -3,7 +3,19 @@
   margin: 0 auto;
   padding: 20px;
 }
+/* drop down styles */
+.arrow_down {
+  display: none;
+}
 
+.toggleMenu {
+  display: none;
+  list-style: none;
+  padding: 0;
+}
+.metta_arrow_down {
+  display: block;
+}
 .main {
   background-color: black;
   color: white;
@@ -101,7 +113,7 @@
 .quickLinks,
 .follow_us {
   flex: 1;
-  max-width: 300px;
+ 
 }
 
 .quickLinks ul {
@@ -120,7 +132,6 @@
 .links {
   list-style: none;
   padding: 0;
-  
 }
 .link {
   font-family: Simplon Norm;
@@ -177,12 +188,36 @@
     padding: 10px;
   }
 
+  .tognav {
+    display: block;
+  }
+  .links {
+    list-style: none;
+    padding: 0;
+    display: none;
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown_toggle {
+    cursor: pointer;
+    font-family: Simplon Norm;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    line-height: 21.6px;
+    text-align: left;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
   .main {
     background-color: black;
     color: white;
     position: relative;
     top: 5em;
-  
   }
   .upper_footer {
     display: flex;
@@ -201,10 +236,30 @@
   .action_links {
     display: flex;
     flex-direction: column;
+    padding-top: 0px;
   }
 
-  .quickLinks h3{
+  .quickLinks h3 {
     margin-bottom: 0px;
-    
+  }
+
+  /* styles for metta muse dropdown */
+  .arrow_down {
+    display: inline-block;
+    filter: invert(100%) grayscale(100%);
+    width: 44px;
+    height: 44px;
+  }
+
+  .metta_arrow_down {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .toggleMenu {
+    display: inline-block;
+    list-style: none;
+    padding: 0;
   }
 }

@@ -40,9 +40,12 @@ const Products = ({products}) => {
           </div>
         </div>
 
-        <div className={styles.recom} onClick={togglepriceFilter}>
-          <span>RECOMMENDED</span>
-          <Image src="/arrow-down.svg" alt="error" width={20} height={20} />
+        <div className={styles.recom}>
+          <span onClick={togglepriceFilter}>RECOMMENDED</span>
+          {!isPriceFilteropen ? <Image src="/arrow-down.svg" alt="error" width={20} height={20} />:
+          <Image src="/arrow-up.svg" alt="error" width={20} height={20}/>
+          }
+          
           {isPriceFilteropen ? <Pricefilter Open={true} />:''}
         </div>
       </div>
