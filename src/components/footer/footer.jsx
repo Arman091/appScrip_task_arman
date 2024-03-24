@@ -70,7 +70,16 @@ const Footer = () => {
                   width={24}
                   height={24}
                 />
-                <span>+USD</span>
+                <span>
+                  {" "}
+                  <Image
+                    src="/Star.svg"
+                    width={12}
+                    height={12}
+                    alt="error"
+                  />{" "}
+                  USD
+                </span>
               </div>
 
               <p className={styles.trans_details}>
