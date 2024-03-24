@@ -6,9 +6,17 @@ import Link from "next/link";
 import FooterDropdown from "./FooterDropdown";
 const Footer = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const [isquicklinkOpen, setquickLinkopen] = useState(false);
+  const [isfollowOpen, setfollowOpen] = useState(false);
+  const toggleQuicklinks = () => {
+    setquickLinkopen(!isquicklinkOpen);
+  };
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const toggleFollowus = () => {
+    setfollowOpen(!isfollowOpen);
   };
   return (
     <footer className={styles.main}>
@@ -88,8 +96,18 @@ const Footer = () => {
           {/* second div */}
 
           <div className={styles.quickLinks}>
-            <h3>QUICK LINKS</h3>
-            <ul>
+            <div className={styles.metta_arrow_down} onClick={toggleQuicklinks}>
+              <h3>QUICK LINKS</h3>
+              <Image
+                src="/arrow-down.svg"
+                alt="error"
+                width={34}
+                height={34}
+                className={styles.arrow_down}
+              />
+            </div>
+
+            <ul className={styles.links}>
               <li>
                 <Link href="#" className={`${styles.link}`}>
                   Orders & Shipping
@@ -126,18 +144,83 @@ const Footer = () => {
                 </Link>
               </li>
             </ul>
+
+            {isquicklinkOpen ? (
+              <ul className={styles.toggleMenu}>
+                <li>
+                  <Link href="#" className={`${styles.link}`}>
+                    Orders & Shipping
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className={`${styles.link}`}>
+                    Join/Login as a Seller
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className={`${styles.link}`}>
+                    Payment & Pricing
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className={`${styles.link}`}>
+                    Return & Refunds
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className={`${styles.link}`}>
+                    FAQs
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className={`${styles.link}`}>
+                    Privacy Policy
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className={`${styles.link}`}>
+                    Terms & Conditions
+                  </Link>
+                </li>
+              </ul>
+            ) : (
+              ""
+            )}
           </div>
           {/* third container */}
           <div className={styles.follow_us}>
-            <div className={styles.social_links_container}>
+            <div className={styles.metta_arrow_down} onClick={toggleFollowus}>
               <h3>follow Us</h3>
-              <div className="social_links">
+              <Image
+                src="/arrow-down.svg"
+                alt="error"
+                width={34}
+                height={34}
+                className={styles.arrow_down}
+              />
+            </div>
+            <div className={styles.social_links_container}>
+              <div className={styles.links}>
                 <Image src="/insta.svg" alt="infosvg" width={24} height={24} />
-                <Image src="/a.svg" alt="linkedinsvg" width={24} height={24} />
+                <Image
+                  src="/linkedin.svg"
+                  alt="linkedinsvg"
+                  width={24}
+                  height={24}
+                />
               </div>
+              {isfollowOpen?<div className={styles.toggleMenu}>
+                <Image src="/insta.svg" alt="infosvg" width={24} height={24} />
+                <Image
+                  src="/linkedin.svg"
+                  alt="linkedinsvg"
+                  width={24}
+                  height={24}
+                />
+              </div>:""}
             </div>
             {/* payment container */}
-            <div className="paymentMethodsContainer">
+            <div className={styles.paymentMethodsContainer}>
               <h3>mettā muse Accepts</h3>
               <div className={styles.payments}>
                 <Image
