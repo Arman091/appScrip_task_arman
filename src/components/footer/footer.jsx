@@ -3,7 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 import styles from "./footer.module.css";
 import Link from "next/link";
-import FooterDropdown from "./FooterDropdown";
+
 const Footer = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isquicklinkOpen, setquickLinkopen] = useState(false);
@@ -16,6 +16,14 @@ const Footer = () => {
     { text: "FAQs", url: "#" },
     { text: "Privacy Policy", url: "#" },
     { text: "Terms & Conditions", url: "#" },
+  ];
+  const additionalFooterLinks = [
+    { text: "About Us", url: "#" },
+    { text: "Stories", url: "#" },
+    { text: "Artisans", url: "#" },
+    { text: "Boutiques", url: "#" },
+    { text: "Contact Us", url: "#" },
+    { text: "EU Compliances Docs", url: "#" },
   ];
   const toggleQuicklinks = () => {
     setquickLinkopen(!isquicklinkOpen);
@@ -49,9 +57,7 @@ const Footer = () => {
               <h3>contact us</h3>
               <div className={styles.media_contact}>
                 <p>+44 221 133 5360</p>
-                <p >
-                  customercare@mettamuse.com
-                </p>
+                <p>customercare@mettamuse.com</p>
               </div>
             </div>
             <div className={styles.currency}>
@@ -91,12 +97,24 @@ const Footer = () => {
             </div>
             {/* for large screens */}
             <ul className={styles.links}>
-              <FooterDropdown />
+              {additionalFooterLinks.map((link, index) => (
+                <li key={index}>
+                  <Link href={link.url} className={styles.link}>
+                    {link.text}
+                  </Link>
+                </li>
+              ))}
             </ul>
             {/* for smaller screens */}
             {isMenuOpen ? (
               <ul className={styles.toggleMenu}>
-                <FooterDropdown />
+                {additionalFooterLinks.map((link, index) => (
+                  <li key={index}>
+                    <Link href={link.url} className={styles.link}>
+                      {link.text}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             ) : (
               ""
@@ -162,7 +180,7 @@ const Footer = () => {
                   height={24}
                 />
               </div>
-              {isfollowOpen ? (
+              {isfollowOpen && (
                 <div className={styles.toggleMenu}>
                   <Image
                     src="/insta.svg"
@@ -177,8 +195,6 @@ const Footer = () => {
                     height={24}
                   />
                 </div>
-              ) : (
-                ""
               )}
             </div>
             {/* payment container */}
