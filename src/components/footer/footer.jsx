@@ -104,6 +104,7 @@ const Footer = () => {
                 className={styles.arrow_down}
               />
             </div>
+
             {/* for large screens */}
             <ul className={styles.links}>
               {additionalFooterLinks.map((link, index) => (

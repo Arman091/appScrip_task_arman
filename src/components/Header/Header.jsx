@@ -1,6 +1,7 @@
 import classes from "./Header.module.css";
 import Image from "next/image";
 import Navbar from "../navbar/Navbar";
+
 const Header = () => {
   return (
     <div className={classes.header}>
@@ -23,7 +24,7 @@ const Header = () => {
       <div className={classes.header_container}>
         <div className={classes.branding}>
           <div className={classes.hamburger}>
-            <Image src="/hamlinear.png" alt="error" width={36} height={40}/>
+            <Image src="/hamlinear.png" alt="error" width={36} height={40} />
           </div>
           <div className={classes.icon}>
             <Image src="/logo.svg" alt="error" width={36} height={40} />
@@ -45,7 +46,7 @@ const Header = () => {
             <Image src="/arrow-down.svg" alt="error" width={24} height={24} />
           </div>
         </div>
-        <Navbar />
+        <Navbar  />
         <div className={classes.bannerTitle}>
           <h1>DISCOVER OUR PRODUCTS</h1>
           <p>

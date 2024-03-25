@@ -1,5 +1,5 @@
 .link {
-  font-family:ui-sans-serif;
+  font-family: ui-sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
@@ -8,7 +8,12 @@
   color: black;
   text-decoration: none;
 }
-
+.navbar a.active {
+  color:black;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 0px;
+}
 .navbar {
   display: flex;
   justify-content: space-evenly;
@@ -16,6 +21,7 @@
   margin: 10px auto;
   margin-top: 68px;
 }
+
 
 .navbarham {
   display: none;
@@ -30,8 +36,12 @@
     margin-top: 68px;
   }
 
-  .navbarham .link:active {
+  .navbarham a.active {
     color: #c0b6b6;
+    font-weight: bold;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 5px;
   }
   .navbarham {
     display: block;

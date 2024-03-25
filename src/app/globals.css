@@ -3,9 +3,12 @@
   --textColor: black;
   --softBg: #f0f0f0;
   --softTextColor: #626262;
-  width: fit-content;
+
 }
 
+.shop{
+  width: 100%;
+}
 body {
   max-width: 100%;
 }

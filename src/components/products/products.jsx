@@ -3,7 +3,7 @@ import styles from "./products.module.css";
 import Image from "next/image";
 import ProductItem from "./ProductItem";
 import Filter from "../filter/Filter";
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import Pricefilter from "../filter/PriceFilter";
 const Products = ({products}) => {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
@@ -12,7 +12,7 @@ const Products = ({products}) => {
   const [isPriceFilteropen, setPriceFilter] = useState(false);
   const togglepriceFilter = () => setPriceFilter(!isPriceFilteropen);
  
-
+ 
   const handleCategorySelect = (category) => {
     setSelectedCategory(category);
   };
